@@ -1,0 +1,67 @@
+/* reset css 重置样式 */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  /* 针对移动端 */
+  -webkit-box-sizing: border-box; /* 主流移动端浏览器兼容 */
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* 点击高亮效果清除 */
+}
+body {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Microsoft Yehei', sans-serif;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+input, textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  /* 清楚移动端输入框有的样式 */
+  -webkit-appearance: none;
+}
+
+/* common css 公共样式 */
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+.m_r10 {
+  margin-right: 10px;
+}
+.m_l10 {
+  margin-left: 10px;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* 
+  精灵图 
+  [class^="icon_"] 匹配 icon_ 开头的元素
+  [class*=" icon_"] 匹配class属性中包含 icon_ 
+  2倍图 解决图片失真问题
+*/
+[class^="icon_"],
+[class*=" icon_"] {
+  background: url('../assets/images/sprites.png') no-repeat;
+  background-size: 200px 200px;
+}
+
+
+
